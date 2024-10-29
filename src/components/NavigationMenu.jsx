@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { motion } from 'framer-motion';
+
 
 // Import Assets
 import logoImage from '../assets/logo.png';
+
+
+// Import Css
+import './Component.css'
 
 const NavigationMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +38,14 @@ const NavigationMenu = () => {
             </div>
           ))}
           <div>
-            <img src={logoImage} alt="Logo" className="w-28 mb-5" />
+            <motion.img
+              src={logoImage}
+              alt="Logo"
+              className="w-28 mb-5 low-image"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1.5 }}
+            />
           </div>
           {menuItems.slice(3).map((item) => (
             <div key={item.title} className="group cursor-pointer font-medium">
@@ -46,8 +59,8 @@ const NavigationMenu = () => {
       {/* Mobile Navigation */}
       <div className="flex md:hidden justify-between items-center p-4">
         <img src={logoImage} alt="Logo" className="w-20" />
-        <button 
-          onClick={toggleMenu} 
+        <button
+          onClick={toggleMenu}
           className="text-black p-2 hover:bg-gray-100 rounded-full transition-colors duration-200"
         >
           <Menu size={24} />
@@ -55,29 +68,27 @@ const NavigationMenu = () => {
       </div>
 
       {/* Overlay */}
-      <div 
-        className={`fixed inset-0 bg-black transition-opacity duration-300 ease-in-out ${
-          isOpen ? 'opacity-50 visible' : 'opacity-0 invisible'
-        } z-20`}
+      <div
+        className={`fixed inset-0 bg-black transition-opacity duration-300 ease-in-out ${isOpen ? 'opacity-50 visible' : 'opacity-0 invisible'
+          } z-20`}
         onClick={toggleMenu}
       />
 
       {/* Sidebar Menu */}
-      <div 
-        className={`fixed top-0 right-0 w-3/4 max-w-xs h-full bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-30 ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
+      <div
+        className={`fixed top-0 right-0 w-3/4 max-w-xs h-full bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-30 ${isOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
       >
         <div className="p-5 flex flex-col h-full">
           <div className="flex justify-end mb-6">
-            <button 
+            <button
               onClick={toggleMenu}
               className="p-2 hover:bg-gray-100 rounded-full transition-colors duration-200"
             >
               <X size={24} />
             </button>
           </div>
-          
+
           <div className="flex flex-col gap-y-6">
             {menuItems.map((item) => (
               <div key={item.title} className="group cursor-pointer">

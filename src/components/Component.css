@@ -1,0 +1,123 @@
+@keyframes smoothMove {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(130px, 0px);
+    }
+
+    50% {
+        transform: translate(0, 0);
+    }
+
+    75% {
+        transform: translate(130px, 0px);
+    }
+}
+
+
+
+.moving-image {
+    animation: smoothMove 4s ease-in-out infinite;
+}
+
+.glow-button {
+    transition: all 0.5s ease;
+}
+
+.glow-button:hover {
+    box-shadow: 0 0 10px rgba(66, 153, 225, 0.8), 0 0 20px rgba(66, 153, 225, 0.6), 0 0 30px rgba(66, 153, 225, 0.4);
+}
+
+@keyframes circularMotion {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(10px, -10px);
+    }
+
+    50% {
+        transform: translate(0, -20px);
+    }
+
+    75% {
+        transform: translate(-10px, -10px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.circular-motion {
+    animation: circularMotion 3s linear infinite;
+}
+
+
+@keyframes lowMove {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(10px, 0px);
+    }
+
+    50% {
+        transform: translate(0, 0);
+    }
+
+    75% {
+        transform: translate(-10px, 0px);
+    }
+}
+
+
+
+.low-image {
+    animation: lowMove 4s ease-in-out infinite;
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scaleX(1);
+    }
+
+    50% {
+        transform: scaleX(1.05);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-10%);
+    }
+
+    50% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-10%);
+    }
+}
+
+.pulse-animation {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.slide-animation {
+    animation: slide 1.5s ease-in-out infinite;
+}

@@ -27,11 +27,11 @@ const Cards = () => {
 
     return (
         <div className="px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 my-6 sm:my-8 lg:my-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 my-6 sm:my-8 lg:my-10 ">
                 {cardData.map((card) => (
                     <div
                         key={card.id}
-                        className="flex justify-center items-center flex-wrap rounded-lg p-[3px] mx-auto w-full max-w-[300px] transform transition-transform duration-300 hover:scale-105"
+                        className="flex cursor-pointer justify-center items-center flex-wrap rounded-lg p-[3px] mx-auto w-full max-w-[300px] transform transition-transform duration-300 hover:scale-105"
                         style={{
                             background: 'linear-gradient(180deg, #7CC140 0%, #388FCB 100%)',
                         }}

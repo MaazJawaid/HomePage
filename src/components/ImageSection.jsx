@@ -1,5 +1,8 @@
 import React from 'react'
 
+// Import Css
+import './Component.css'
+
 // Import Assets
 import rightBackground from '../assets/rightBackground.png'
 import leftUpperBackground1 from '../assets/leftUpperBackground1.png'
@@ -30,7 +33,7 @@ const ImageSection = () => {
                 <img
                     src={leftUpperBackground1}
                     alt="leftUpperBackground Image Rotated"
-                    className="absolute left-64 w-44 top-44 z-0 rotate-180"
+                    className="absolute left-72 w-40 top-56 z-0 rotate-180"
                 />
             </div>
 
@@ -38,7 +41,7 @@ const ImageSection = () => {
                 <img
                     src={rightUpperBackground1}
                     alt="rightUpperBackground Image Rotated"
-                    className="absolute right-24 w-32 top-16 z-0 rotate-180"
+                    className="absolute right-24 w-32 top-16 z-0 rotate-180 circular-motion"
                 />
             </div>
 
